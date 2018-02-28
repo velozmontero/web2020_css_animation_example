@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.background_trees {
+  background: url('../images/scary_forest_trees.png') 0 0 repeat-x;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 1920px 100%;
+  animation: background_trees 10s linear infinite;
+}
+
+.dead_front_trees {
+  z-index: 100;
+  background: url('../images/dead_front_trees.png') 0 0 repeat-x;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 3840px 100%;
+  animation: dead_front_trees 4s linear infinite;
+}
+
+.dead_tree {
+  z-index: 1;
+  background: url('../images/dead_tree.png') 0 0 no-repeat;
+  position: absolute;
+  width: 600px;
+  height: 469px;
+  bottom: 0px;
+  background-size: 600px 469px;
+  animation: dead_tree 10s linear infinite;
+}
+
+.rocky_floor {
+  z-index: 5;
+  background: url('../images/rocky_floor.png') 0 0 repeat-x;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 1920px 100%;
+  animation: rocky_floor 5s linear infinite;
+}
+
+.barbarian_white {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 5%;
+  z-index: 10;
+  background: url('../images/barbarian_run.png') 0 0 no-repeat;
+  width: 1201px;
+  height: 801px;
+  background-size: 4804px 2403px;
+  animation: run 1000ms steps(4) infinite;
+}
+
+@keyframes dead_tree {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes dead_front_trees {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -3840px 0;
+  }
+}
+
+@keyframes background_trees {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1920px 0;
+  }
+}
+
+@keyframes rocky_floor {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1920px 0;
+  }
+}
+
+@keyframes move {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes run {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: -4804px 0;
+  }
+  25.000001% {
+    background-position: 0 -801px;
+  }
+  50% {
+    background-position: -4804px -801px;
+  }
+  50.000001% {
+    background-position: 0 -1602px;
+  }
+  100% {
+    background-position: -4804px -1602px;
+  }
+}
+
+@keyframes walk {
+  0% {
+    background-position: 0 0;
+  }
+  20% {
+    background-position: -3603px 0;
+  }
+  20.000001% {
+    background-position: 0 -801px;
+  }
+  40% {
+    background-position: -3603px -801px;
+  }
+  40.000001% {
+    background-position: 0 -1602px;
+  }
+  60% {
+    background-position: -3603px -1602px;
+  }
+  60.000001% {
+    background-position: 0 -2403px;
+  }
+  80% {
+    background-position: -3603px -2403px;
+  }
+  80.000001% {
+    background-position: 0 -3204px;
+  }
+  100% {
+    background-position: -3603px -3204px;
+  }
+}
